@@ -1,0 +1,36 @@
+# This is an example PKGBUILD file. Use this as a start to creating your own,
+# and remove these comments. For more information, see 'man PKGBUILD'.
+# NOTE: Please fill out the license field for your package! If it is unknown,
+# then please put 'unknown'.
+
+# Maintainer: Pavel Klevakin klev.paul@gmail.com
+pkgname=layout-corrector
+pkgver=0.2
+pkgrel=1
+epoch=
+pkgdesc="Script to correct input in the wrong keyboard layout."
+arch=( 'any' )
+url="https://github.com/i026e/layout_corrector"
+license=("unknown")
+groups=()
+depends=("python" "xsel" "alsa-utils")
+makedepends=( 'python-setuptools' )
+checkdepends=()
+optdepends=()
+provides=( "$pkgname" )
+conflicts=( "$pkgname" )
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=( "layout_corrector-$pkgver.tar.gz")
+noextract=()
+md5sums=( "SKIP" )
+validpgpkeys=()
+
+
+package() {
+  cd "$srcdir/layout_corrector-$pkgver"
+  python setup.py install --root="$pkgdir/" --optimize=1
+}
