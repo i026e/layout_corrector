@@ -7,10 +7,14 @@ _PACKAGE=layout_corrector
 
 VERSION=0.2
 
+ifndef DESTDIR
+	DESTDIR = "./debian/$(PACKAGE)/"
+endif
+
 all:
 
 install: tar
-	pip install "./dist/$(_PACKAGE)-$(VERSION).tar.gz"
+	pip install --root=$(DESTDIR) "./dist/$(_PACKAGE)-$(VERSION).tar.gz"
 
 tar:
 	sed -i 's/version=.*/version="$(VERSION)",/' setup.py
@@ -51,4 +55,3 @@ git:
 	git commit -m "$(m)"
 	git push origin master
 
-PHONY: all arch

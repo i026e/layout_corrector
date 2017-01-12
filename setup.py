@@ -19,11 +19,11 @@ setup(name="layout_corrector",
 
       packages=["layout_corrector", ],
 
-      package_data={"layout_corrector": ["sounds/*.wav"]},
+      package_data={"layout_corrector": ["sounds/*.wav", "data/*"]},
 
       scripts=["bin/layout-corrector"],
 
-      data_files=[("/etc/xdg/autostart/", ["layout-corrector.desktop"])  ],
+#      data_files=[("~/.config/autostart/", ["data/layout-corrector.desktop"])  ],
 
       install_requires=[ "pynput", "xkbgroup", ],
 
