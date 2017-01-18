@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=Print Queue Applet
-Exec=system-config-printer-applet
+Name=Layout Corrector
+Exec=layout-corrector
 Terminal=false
 Type=Application
-Icon=printer
+Icon=keyboard
 StartupNotify=false
 X-GNOME-Autostart-Delay=30
 X-Desktop-File-Install-Version=0.22

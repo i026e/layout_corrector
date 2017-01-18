@@ -1,7 +1,7 @@
 ## arg 1:  the new package version
 post_install() {
 	# reload udev rules
-        echo "Please run \"layout-corrector autostart\" from shell to enable its autostart"
+        echo "Please run \"layout-corrector autostart\" from shell to enable autostart"
 }
 
 
