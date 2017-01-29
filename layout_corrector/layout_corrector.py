@@ -55,8 +55,8 @@ def play(sound):
             p = subprocess.Popen(["aplay", sound],
                             stdout=subprocess.PIPE,
                             stderr=subprocess.STDOUT, close_fds=True)
-            stdout, stderr = p.communicate()
-            print(stdout.decode('utf-8'))
+            #stdout, stderr = p.communicate()
+            #print(stdout.decode('utf-8'))
         except Exception as e:
             print(e)
 
