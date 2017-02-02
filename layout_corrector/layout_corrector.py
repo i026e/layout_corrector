@@ -51,10 +51,10 @@ def set_buffer(text):
 
 def play(sound):
     if config.sounds:
-	    try:
+        try:
             p = subprocess.Popen(["aplay", sound],
-                            stdout=subprocess.PIPE,
-                            stderr=subprocess.STDOUT, close_fds=True)
+                                 stdout=subprocess.PIPE,
+                                 stderr=subprocess.STDOUT, close_fds=True)
             #stdout, stderr = p.communicate()
             #print(stdout.decode('utf-8'))
         except Exception as e:
