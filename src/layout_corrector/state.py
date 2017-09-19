@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import logging
 
 import layout_corrector.config as config
 from pynput.keyboard import Key, KeyCode
 
 from threading import Lock
+
+log = logging.getLogger(__name__)
 
 def get_key(code):
     if len(code) == 1:
@@ -39,8 +42,10 @@ class StateMachine:
             elif (key not in self.combo):
                 self.other_keys_pressed.discard(key)
     
-    def bingo(self):        
-        print(self.combo, self.other_keys_pressed)
+    def bingo(self):
+        log.debug("Shortcut keys: %s", self.combo)
+        log.debug("Other keys pressed: %s", self.other_keys_pressed)
+
         return len(self.combo) == self.num_keys_pressed #and \
         #        len(self.other_keys_pressed) == 0
         

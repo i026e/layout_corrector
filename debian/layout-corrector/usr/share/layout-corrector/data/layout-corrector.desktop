@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Layout Corrector
+Exec=layout-corrector
+Terminal=false
+Type=Application
+Icon=keyboard
+StartupNotify=false
+X-GNOME-Autostart-Delay=30
+X-Desktop-File-Install-Version=0.22
+Categories=Other;

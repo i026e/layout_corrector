@@ -5,7 +5,7 @@
 
 # Maintainer: Pavel Klevakin klev.paul@gmail.com
 pkgname=layout-corrector
-pkgver=0.2
+pkgver=0.4
 pkgrel=1
 epoch=
 pkgdesc="Script to correct input in the wrong keyboard layout."
@@ -13,7 +13,7 @@ arch=( 'any' )
 url="https://github.com/i026e/layout_corrector"
 license=("unknown")
 groups=()
-depends=("python" "xsel" "alsa-utils")
+depends=("python" "xsel" "alsa-utils" "python-xkbgroup" "python-pynput")
 makedepends=( 'python-setuptools' )
 checkdepends=()
 optdepends=()
@@ -32,5 +32,5 @@ validpgpkeys=()
 
 package() {
   cd "$srcdir/layout_corrector-$pkgver"
-  python setup.py install --root="$pkgdir/" --optimize=1
+  make DESTDIR="$pkgdir/" install
 }
