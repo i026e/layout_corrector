@@ -34,9 +34,8 @@ clean:
 
 arch: FORCE
 	sed -i 's/pkgver=.*/pkgver=$(VERSION)/' "./arch/$(PACKAGE)/PKGBUILD"
-	cp "./dist/$(_PACKAGE)-$(VERSION).tar.gz" "./arch/$(PACKAGE)/"
-	cd "./arch/$(PACKAGE)" && makepkg -f
 
+	cd "./arch/$(PACKAGE)" && makepkg -f
 	cp ./arch/$(PACKAGE)/*.tar.xz ./dist/
 
 deb:
