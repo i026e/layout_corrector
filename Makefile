@@ -22,7 +22,7 @@ install:
 	cp -r ./src/layout_corrector/* "$(DESTDIR)usr/share/$(PACKAGE)/"
 
 	echo '#!/usr/bin/env sh' > "$(DESTDIR)usr/share/$(PACKAGE)/data/layout-corrector"
-	echo "cd usr/share/$(PACKAGE)" >> "$(DESTDIR)usr/share/$(PACKAGE)/data/layout-corrector"
+	echo "cd /usr/share/$(PACKAGE)" >> "$(DESTDIR)usr/share/$(PACKAGE)/data/layout-corrector"
 	echo -e 'python layout_corrector_control.py \044@' >> "$(DESTDIR)usr/share/$(PACKAGE)/data/layout-corrector"
 	chmod 755 "$(DESTDIR)usr/share/$(PACKAGE)/data/layout-corrector"
 
