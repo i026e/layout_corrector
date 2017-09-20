@@ -13,9 +13,9 @@ import logging
 from pynput.keyboard import Controller, Listener
 from xkbgroup import XKeyboard
 
-import layout_corrector.config as config
-import layout_corrector.correction as correction
-import layout_corrector.state as state
+import config
+import correction
+import state
 
 log = logging.getLogger(__name__)
 
