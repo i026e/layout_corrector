@@ -31,6 +31,6 @@ validpgpkeys=()
 
 
 package() {
-  cd "$srcdir/layout_corrector-$pkgver"
+  cd "$srcdir/layout-corrector"
   make DESTDIR="$pkgdir/" install
 }
