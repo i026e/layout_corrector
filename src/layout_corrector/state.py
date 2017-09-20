@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-import layout_corrector.config as config
+import config
 from pynput.keyboard import Key, KeyCode
 
 from threading import Lock
